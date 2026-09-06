@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🔍 Détection d'un Scan de Ports SYN — Wireshark
+# 🔍 Détection d'un Scan de Ports SYN  Wireshark
 
-### Analyse réseau défensive — Capture • Filtrage • Corrélation avec l'attaquant
+### Analyse réseau défensive  Capture • Filtrage • Corrélation avec l'attaquant
 
 ![Wireshark](https://img.shields.io/badge/Wireshark-4.6.4-1679A7?style=for-the-badge&logo=wireshark&logoColor=white)
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-attaquant-557C94?style=for-the-badge&logo=kalilinux&logoColor=white)
@@ -16,7 +16,7 @@
 
 ## 📖 Description
 
-Laboratoire d'analyse réseau réalisé sous **VMware**, mettant en scène une machine cible (**192.168.1.70**) et une machine **Kali Linux** attaquante (**192.168.1.49**). L'objectif est de capturer avec **Wireshark** un scan de ports **SYN (half-open scan)** lancé via **Nmap**, puis de reconstituer la chronologie de l'attaque à partir des seuls paquets capturés — avant de confirmer les résultats côté attaquant.
+Laboratoire d'analyse réseau réalisé sous **VMware**, mettant en scène une machine cible (**192.168.1.70**) et une machine **Kali Linux** attaquante (**192.168.1.49**). L'objectif est de capturer avec **Wireshark** un scan de ports **SYN (half-open scan)** lancé via **Nmap**, puis de reconstituer la chronologie de l'attaque à partir des seuls paquets capturés  avant de confirmer les résultats côté attaquant.
 
 ---
 
@@ -82,7 +82,7 @@ sudo nmap -sV 192.168.1.70   # Détection de version de service
 sudo nmap -A 192.168.1.70    # Scan agressif (OS, version, scripts)
 ```
 
-Résultat : seul le port **22/tcp (SSH — OpenSSH 10.2p1 Ubuntu)** est ouvert, tous les autres sont fermés (RST reçus).
+Résultat : seul le port **22/tcp (SSH  OpenSSH 10.2p1 Ubuntu)** est ouvert, tous les autres sont fermés (RST reçus).
 
 ---
 
@@ -97,7 +97,7 @@ Résultat : seul le port **22/tcp (SSH — OpenSSH 10.2p1 Ubuntu)** est ouvert, 
 
 ## ✅ Conclusion
 
-La corrélation entre la capture Wireshark et les commandes Nmap exécutées côté attaquant confirme sans ambiguïté qu'un **scan de ports SYN (half-open scan)** a été mené contre la machine cible. Ce type de scan est furtif car il n'établit jamais de connexion TCP complète (pas de 3-way handshake terminé), ce qui le rend historiquement plus difficile à logguer côté application — d'où l'intérêt de l'analyse au niveau paquet avec Wireshark.
+La corrélation entre la capture Wireshark et les commandes Nmap exécutées côté attaquant confirme sans ambiguïté qu'un **scan de ports SYN (half-open scan)** a été mené contre la machine cible. Ce type de scan est furtif car il n'établit jamais de connexion TCP complète (pas de 3-way handshake terminé), ce qui le rend historiquement plus difficile à logguer côté application  d'où l'intérêt de l'analyse au niveau paquet avec Wireshark.
 
 ---
 
