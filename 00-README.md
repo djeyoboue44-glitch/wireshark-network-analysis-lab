@@ -44,37 +44,37 @@ Laboratoire d'analyse réseau réalisé sous **VMware**, mettant en scène une m
 ### 🏗️ Mise en place de la capture
 
 **Interface Wireshark — sélection de `ens33`**
-![Interface Wireshark](1-INTERFACE_WIRESHARK.PNG)
+![Interface Wireshark](1-INTERFACE%20WIRESHARK.PNG)
 
 **Capture en direct sur ens33**
-![Capture en direct sur ens33](2-CAPTURE_EN_DIRECT_SUR_ENS33.PNG)
+![Capture en direct sur ens33](2-CAPTURE%20EN%20DIRECT%20SUR%20ENS33.PNG)
 
 ### 🕵️ Isolation du trafic SYN
 
 **Filtre SYN uniquement**
-![Filtre SYN uniquement](3-FILTRE_SYN_UNIQUEMENT.PNG)
+![Filtre SYN uniquement](3-FILTRE%20SYN%20UNIQUEMENT.PNG)
 
 **Filtre par IP source (Kali)**
-![Filtre source 192.168.1.49](4-FILTRE_SOURCE_192_168_1_49.PNG)
+![Filtre source 192.168.1.49](4-FILTRE%20SOURCE%20192.168.1.49.PNG)
 
 **Filtre RST renvoyés par la cible**
-![Filtre RST depuis Kali](5-FILTRE_RST_DEPUIS_KALI.PNG)
+![Filtre RST depuis Kali](5-FILTRE%20RST%20DEPUIS%20KALI.PNG)
 
 ### 🎯 Signature du scan de ports
 
 **Vue complète du scan SYN**
-![Port scan SYN - vue complète](6-_PORT_SCAN_SYN_-_VUE_COMPLETE.PNG)
+![Port scan SYN - vue complète](6-%20PORT%20SCAN%20SYN%20-%20VUE%20COMPLETE.PNG)
 
 **Analyse des conversations TCP**
-![Conversation TCP](7-_CONVERSATION_TCP.PNG)
+![Conversation TCP](7-%20CONVERSATION%20TCP.PNG)
 
 **Endpoints TCP**
-![Endpoints TCP](9-_ENDPOINTS_TCP.PNG)
+![Endpoints TCP](9-%20ENDPOINTS%20TCP.PNG)
 
 ### 💻 Confirmation côté attaquant
 
 **Scan Nmap exécuté depuis Kali**
-![Scan Nmap côté attaquant](8-_SCAN_NMAP_COTE_ATTAQUANT.PNG)
+![Scan Nmap côté attaquant](8-%20SCAN%20NMAP%20COTE%20ATTAQUANT.PNG)
 
 ```bash
 sudo nmap -sS 192.168.1.70   # Scan SYN furtif
